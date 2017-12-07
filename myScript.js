@@ -85,6 +85,7 @@ $(document).ready(function(){
 
 
 var resizePage = function(){
+	$('body').append('<h1>resizing function is called</h1>');
 	//cross browser solution
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
 
