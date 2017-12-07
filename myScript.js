@@ -103,6 +103,7 @@ var resizePage = function(){
 var mobileMenuCss = function(){
 	$('body').append('<h1>mobileMenuCss function is called</h1>');//debugging
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
+	$('body').append('<h1>'+width+'</h1');//debugging
 	if (width < 750) {
 	   $('body').append('<h1>width less than 750</h1>');//debugging
 		$('#content').css({'width':'90%','margin-left':'5%','padding':'10%'});
