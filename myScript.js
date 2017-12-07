@@ -101,16 +101,16 @@ var resizePage = function(){
 
 
 var mobileMenuCss = function(){
-	$('body').append('<h1>mobileMenuCss function is called</h1>');
+	$('body').append('<h1>mobileMenuCss function is called</h1>');//debugging
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
 	if (width < 750) {
-	   console.log("less than 750");
+	   $('body').append('<h1>width less than 750</h1>');//debugging
 		$('#content').css({'width':'90%','margin-left':'5%','padding':'10%'});
 		$('.menu-item img').css({'float':'none'});
 		$('.food-description').css({'padding-top':'1em','margin-left':'1em'});
 	}
 	else {
-	  console.log("greater than 750");
+	  $('body').append('<h1>greater than 750</h1>');//debugging
 		$('#content').css({'width':'80%','margin-left':'10%', 'padding':'10%', 'padding-top':'5%'});
 		$('.menu-item img').css({'float':'left'});
 		$('.food-description').css({'padding-top':'1em','margin-left':'15em'});
