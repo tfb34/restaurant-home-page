@@ -85,7 +85,6 @@ $(document).ready(function(){
 
 
 var resizePage = function(){
-	$('body').append('<h1>resizing function is called</h1>');
 	//cross browser solution
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
 
@@ -102,6 +101,7 @@ var resizePage = function(){
 
 
 var mobileMenuCss = function(){
+	$('body').append('<h1>resizing function is called</h1>');
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
 	if (width < 750) {
 	   console.log("less than 750");
