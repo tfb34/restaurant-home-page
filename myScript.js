@@ -1,17 +1,19 @@
 $(document).ready(function(){
-	$('body')
     $('body').append('<h1 id="restaurant-name"><span>Fresh</span>Burg</h1>');
 
     $('body').append('<ul><li id="home">Home</li><li id="menu">Menu</li><li id="contact">Contact</li></ul>')
-	$('body').append('<img id="main-pic" src="lamb-burger.jpg" alt="burger">');
-	$('body').append('<div id="content"></div>');
-	$('#content').append('<p id="headline">"Not just fresh but real damn good!" &mdash; everyone</p>');
+	//$('body').append('<img id="main-pic" src="lamb-burger.jpg" alt="burger">');
+	$('body').append('<div id="main-pic"></div>');
+	$('#main-pic').css({'background-image':'url(lamb-burger.jpg)','background-repeat':'no-repeat','background-size':'cover','position':'absolute','top':'0','width':'100%','z-index':'-1','height':'1000px'});
 
+	$('body').append('<div id="content"></div>');
+	$('#content').append('<p id="headline">"Not just fresh but real damn good!" &mdash;everyone</p>');
+	$('#content').append('<div class="home-page"></div>');
 
 	$('body').css({'background-color': '#8f3e97', 'padding':'0','margin':'0'});
 	$('#restaurant-name').css({'color':'#35a4dc','font-weight':'bold','width':'20%','text-align':'center','margin-top':'5%','margin-left':'5%'});
 	$('span').css({'background-color':'white','border-radius':'5px','padding-right':'5px','padding-left':'5px','margin-right':'5px'});
-	$('ul').css({'list-style':'none','text-align':'center','background-color':'white','width':'99%'});
+	$('ul').css({'list-style':'none','text-align':'center','background-color':'white'});
 	
 
 	var navBarItems = $('ul').children();
@@ -28,8 +30,8 @@ $(document).ready(function(){
 	$('#home').css({'background-color':'grey', 'color':'white', 'border-radius':'5px;'});
 
 	$('ul li:nth-child(2)').css({'margin-left':'2em','margin-right':'2em'});
-	$('#main-pic').css({'position':'absolute','top':'0','width':'100%','min-width':'1205px','z-index':'-1'});
-	$('#headline').css({'color':'white','font-size':'30px','line-height':'2em','text-align':'center', 'margin-top':'23%','font-weight':'bold'});
+	
+	$('#headline').css({'color':'white','font-size':'30px','line-height':'2em','text-align':'center', 'margin-top':'30%','font-weight':'bold'});
 
 
 	$( "#menu" ).click(function() {
@@ -47,15 +49,16 @@ $(document).ready(function(){
 		$('.menu-item img').css({'float':'left'});
 		$('.menu-item:after').css({'content':'','display':'block','clear':'both'});
 		$('.food-description').css({'padding-top':'1em','margin-left':'15em'});
+
 		mobileMenuCss();
 		}
 	}); 
 
 	$("#home").click(function(){
 		$('#content').empty();
-		$('#content').append('<div class="home-page"></div>')
+		$('#content').append('<div class="home-page"></div>');
 		$('#content').append('<p id="headline">"Not just fresh but real damn good!" &mdash;everyone</p>');
-		$('#headline').css({'color':'white','font-size':'30px','line-height':'2em','text-align':'center', 'margin-top':'23%','font-weight':'bold'});
+		$('#headline').css({'color':'white','font-size':'30px','line-height':'2em','text-align':'center', 'margin-top':'30%','font-weight':'bold'});
 		$('#content').css({'background-color':'transparent','box-shadow':'none'});
 	});
 
@@ -87,12 +90,7 @@ $(document).ready(function(){
 var resizePage = function(){
 	//cross browser solution
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
-	$('body').append('<h1>resizingPage function is called</h1>');
-	console.log(width);
-
-	if($('.home-page').length >0){
-		console.log('resize home');
-	}else if($('.menu-page').length > 0){
+	if($('.menu-page').length > 0){
 		mobileMenuCss();
 	}else if($('.contact-page').length >0){
 		mobileContactCss();
@@ -120,9 +118,12 @@ var mobileMenuCss = function(){
 
 var mobileContactCss = function(){
 	var width = (window.innerWidth > 0)? window.innerWidth : document.documentElement.clientWidth;
+
 	if(width < 608){
 		$('#content p').css({'font-size':'16px'});
 	}else{
 		$('#content p').css({'font-size':'30px'});
 	}
 };
+
+
