@@ -2,7 +2,7 @@ $(document).ready(function(){
     $('body').append('<h1 id="restaurant-name"><span>Fresh</span>Burg</h1>');
 
     $('body').append('<ul><li id="home">Home</li><li id="menu">Menu</li><li id="contact">Contact</li></ul>')
-	//$('body').append('<img id="main-pic" src="lamb-burger.jpg" alt="burger">');
+	
 	$('body').append('<div id="main-pic"></div>');
 	$('#main-pic').css({'background-image':'url(lamb-burger.jpg)','background-repeat':'no-repeat','background-size':'cover','position':'absolute','top':'0','width':'100%','z-index':'-1','height':'1000px'});
 
@@ -99,17 +99,15 @@ var resizePage = function(){
 
 
 var mobileMenuCss = function(){
-	$('body').append('<h1>mobileMenuCss function is called</h1>');//debugging
+
 	var width = (window.innerWidth > 0) ? window.innerWidth : document.documentElement.clientWidth; //for IE8 
-	$('body').append('<h1>'+width+'</h1');//debugging
+	
 	if (width < 750) {
-	   $('body').append('<h1>width less than 750</h1>');//debugging
 		$('#content').css({'width':'90%','margin-left':'5%','padding':'10%'});
 		$('.menu-item img').css({'float':'none'});
 		$('.food-description').css({'padding-top':'1em','margin-left':'1em'});
 	}
 	else {
-	  $('body').append('<h1>greater than 750</h1>');//debugging
 		$('#content').css({'width':'80%','margin-left':'10%', 'padding':'10%', 'padding-top':'5%'});
 		$('.menu-item img').css({'float':'left'});
 		$('.food-description').css({'padding-top':'1em','margin-left':'15em'});
