@@ -73,7 +73,7 @@ $(document).ready(function(){
     $('body').append('<ul><li id="home">Home</li><li id="menu">Menu</li><li id="contact">Contact</li></ul>')
 	
 	$('body').append('<div id="main-pic"></div>');
-	$('#main-pic').css({'background-image':'url(../assets/lamb-burger.jpg)','background-repeat':'no-repeat','background-size':'cover','position':'absolute','top':'0','width':'100%','z-index':'-1','height':'1000px'});
+	$('#main-pic').css({'background-image':'url(assets/lamb-burger.jpg)','background-repeat':'no-repeat','background-size':'cover','position':'absolute','top':'0','width':'100%','z-index':'-1','height':'1000px'});
 
 	$('body').append('<div id="content"></div>');
 	$('#content').append('<p id="headline">"Not just fresh but real damn good!" <br>&mdash;everyone</p>');
@@ -108,9 +108,9 @@ $(document).ready(function(){
 		var menu = $('.menu-page');
 		if(!menu.length){
 	  	$('#content').empty();
-	  	$('#content').append('<div class="menu-item"><img src="../assets/pineapple.jpg"><div class="food-description"><h5>Hawaiian Burger <span>with fries</span></h5><p>$7.99<br>Ingredients: Beef, Bacon, Lettuce, Pineapple, Whole Wheat bun</p></div></div>');
-		$('#content').append('<div class="menu-item"><img src="../assets/lamb-burger.jpg"><div class="food-description"><h5>Squire Burger <span>with curly fries</span></h5><p>$10.50<br>Ingredients: Lamb, Spinach, Red Onion, Feta Cheese, Balsamic Vinegar, Whole Wheat bun</p></div></div>');
-		$('#content').append('<div class="menu-item"><img src="../assets/portobello.jpg"><div class="food-description"><h5>Mushroom Burger <span>with fries</span></h5><p>$10.50<br>Ingredients: Mushroom, Cheese, Onions, Potato bread</p></div></div>');
+	  	$('#content').append('<div class="menu-item"><img src="assets/pineapple.jpg"><div class="food-description"><h5>Hawaiian Burger <span>with fries</span></h5><p>$7.99<br>Ingredients: Beef, Bacon, Lettuce, Pineapple, Whole Wheat bun</p></div></div>');
+		$('#content').append('<div class="menu-item"><img src="assets/lamb-burger.jpg"><div class="food-description"><h5>Squire Burger <span>with curly fries</span></h5><p>$10.50<br>Ingredients: Lamb, Spinach, Red Onion, Feta Cheese, Balsamic Vinegar, Whole Wheat bun</p></div></div>');
+		$('#content').append('<div class="menu-item"><img src="assets/portobello.jpg"><div class="food-description"><h5>Mushroom Burger <span>with fries</span></h5><p>$10.50<br>Ingredients: Mushroom, Cheese, Onions, Potato bread</p></div></div>');
 		$('#content').append('<div class="menu-page"></div>');
 
 		$('#content').css({'width':'80%','margin-left':'10%','margin-top':'5%','border-radius':'20px','box-sizing':'border-box','background-color':'rgba(212,198,155,0.9)','box-shadow':'0px 0px 15px #888888','padding':'50px'});
